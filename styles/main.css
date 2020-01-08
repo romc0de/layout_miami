@@ -557,7 +557,8 @@ p {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 48px;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #fff; }
   .toggler-label:hover {
     color: #9fadc2; }
 
