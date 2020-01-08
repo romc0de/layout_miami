@@ -110,6 +110,12 @@ p {
       bottom: 140px; }
 
 @media (max-width: 999px) {
+  .header__logo {
+    display: block;
+    top: 24px;
+    left: calc(50% - 36.5px);
+    width: 73px;
+    height: 48px; }
   .header__phone_responsive {
     display: block; }
   .header__phone {
@@ -165,83 +171,10 @@ p {
       color: #9fadc2; }
   .nav__logo {
     display: none; }
-  .nav__phone {
-    font-size: 12px;
-    line-height: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 2px;
-    display: none; }
-  .nav__action {
-    display: none; }
-
-.show-menu-btn {
-  position: absolute;
-  top: 36px;
-  right: 23px; }
-
-.show-menu-btn,
-.hide-menu-btn {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  font-size: 24px;
-  cursor: pointer;
-  display: none; }
-  .show-menu-btn:hover,
-  .hide-menu-btn:hover {
-    color: #9fadc2; }
-
-#toggler {
-  position: absolute;
-  visibility: hidden;
-  z-index: -1111; }
 
 @media (max-width: 999px) {
-  .nav__logo {
-    display: block;
-    top: 24px;
-    left: calc(50% - 73px/2);
-    width: 73px;
-    height: 48px; }
-  .nav__phone {
-    font-size: 12px;
-    line-height: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 2px;
-    display: block; }
-  .nav__action {
-    display: block; }
-  .nav .show-menu-btn,
-  .nav .hide-menu-btn {
-    display: block; }
-  .nav .hide-menu-btn {
-    position: absolute;
-    top: 36px;
-    right: 23px;
-    color: #fff;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    font-size: 24px;
-    cursor: pointer; }
-    .nav .hide-menu-btn:hover {
-      color: #9fadc2; }
   .nav__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    top: -644px;
-    right: 20%;
-    padding: 120px 20px;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
-    background: rgba(0, 117, 255, 0.5); }
+    display: none; }
   .nav__item, .nav__link {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -253,9 +186,7 @@ p {
     letter-spacing: 2px;
     padding: 12px 0; }
   .nav__item_active {
-    background-color: rgba(255, 255, 255, 0); }
-  #toggler:checked ~ .nav__list {
-    right: 0; } }
+    background-color: rgba(255, 255, 255, 0); } }
 
 .logo {
   position: absolute;
@@ -617,5 +548,84 @@ p {
   background-repeat: no-repeat; }
   .footer__logo {
     bottom: 24px; }
+
+.toggler-label {
+  display: none;
+  position: absolute;
+  top: 36px;
+  right: 23px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 48px;
+  cursor: pointer; }
+  .toggler-label:hover {
+    color: #9fadc2; }
+
+.toggler-label::before {
+  content: "="; }
+
+.toggler:checked ~ .toggler-label::before {
+  content: "x"; }
+
+.toggler {
+  display: none; }
+
+.nav-responsive__logo {
+  display: none;
+  top: 24px;
+  left: calc(50% - 36.5px);
+  width: 73px;
+  height: 48px; }
+
+.nav-responsive__item {
+  list-style-type: none; }
+
+.nav-responsive__phone {
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  display: block; }
+
+.nav-responsive__action {
+  display: block; }
+
+@media (max-width: 999px) {
+  .nav-responsive__logo {
+    display: block; }
+  .nav-responsive__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 0;
+    left: -150%;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 120px 20px;
+    -webkit-transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
+    background: #0075ff; }
+    .nav-responsive__list:visited {
+      color: #fff; }
+    .nav-responsive__list:hover {
+      color: #9fadc2; }
+  .toggler-label {
+    display: block;
+    color: #fff;
+    z-index: 1; }
+  .toggler:checked ~ .nav-responsive__list {
+    left: 0; } }
 
 /*# sourceMappingURL=main.css.map */
